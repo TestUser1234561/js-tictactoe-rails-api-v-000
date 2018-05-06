@@ -22,6 +22,7 @@ function doTurn(s) {
   updateState(s);
   turn++;
   if (checkWinner()) {
+    saveGame();
     resetBoard()
   } else if (turn === 9) {
     setMessage("Tie game.");
