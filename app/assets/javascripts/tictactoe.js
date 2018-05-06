@@ -10,6 +10,9 @@ let currentGame = 0;
 
 function attachListeners() {
   $('td').click((target) => { if(!$(target).text && !checkWinner()) { doTurn(target) } })
+  $('#save').click(() => { saveGame() })
+  $('#previous').click(() => { showPreviousGames() })
+  $('#clear').click(() => { saveGame() })
 }
 
 function player() { turn % 2 ? 'O' : 'X' }
