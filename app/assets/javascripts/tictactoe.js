@@ -71,7 +71,7 @@ function saveGame() {
   } else {
     console.log('2')
     $.post('/games', {state: board}, (data) => {
-      console.log(game)
+      console.log(data)
       game = game.data.id;
       //$('#games').append(`<button id="gameid-${game.data.id}">${game.data.id}</button><br>`);
       //$("#gameid-" + game.data.id).on('click', () => { loadGame(game.data.id) });
