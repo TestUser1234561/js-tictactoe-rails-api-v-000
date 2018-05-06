@@ -99,10 +99,8 @@ function loadGame(id) {
   $.get({
     url: `/games/${id}`,
   }).done((data) => {
-
     $('td').map((index, target) => { $(target).text(data.data.attributes.state[index]); })
     turn = data.data.attributes.state.join('').length;
     game = data.data.id;
-
   });
 }
