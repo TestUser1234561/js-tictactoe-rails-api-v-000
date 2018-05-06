@@ -60,6 +60,7 @@ function saveGame() {
   let board = $('td').map((index, target) => { return $(target).text(); })
   console.log('here')
   if(game) {
+    console.log('1')
     $.ajax({
       type: 'PATCH',
       url: `/games/${currentGame}`,
