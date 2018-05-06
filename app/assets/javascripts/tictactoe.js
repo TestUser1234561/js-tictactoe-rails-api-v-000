@@ -26,3 +26,21 @@ function resetBoard() {
 function setMessage(string) {
   $('#message').text(string);
 }
+
+function checkWinner() {
+  let won = false;
+  let board = $('td').map((index, target) => { $(target).text(); })
+
+  WINNING_COMBOS.some(function(combo) {
+    if (board[combo[0]] !== "" && board[combo[0]] === board[combo[1]] && board[combo[1]] === board[combo[2]]) {
+      setMessage(`Player ${board[combo[0]]} Won!`);
+      return winner = true;
+    }
+  });
+
+  WIN_COMBOS.each((combo) => {
+    if(board[combo[0]] !== '' && board[combo[0]] === board[combo[1]] === board[combo[3]])
+  })
+
+  return winner;
+}
