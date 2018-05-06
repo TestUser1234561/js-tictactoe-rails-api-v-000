@@ -73,7 +73,7 @@ function saveGame() {
       type: 'PATCH',
       url: `/game`,
       data: {state: board}
-    }, (data) => {
+    }, function(data) {
       console.log(data)
     });
   }
