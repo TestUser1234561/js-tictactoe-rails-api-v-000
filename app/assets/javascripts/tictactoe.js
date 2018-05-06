@@ -69,9 +69,12 @@ function saveGame() {
     });
   } else {
     console.log('2')
-    $.post('/games', {state: board}, (data) => {
+    $.ajax({
+      type: 'PATCH',
+      url: `/games/${currentGame}`,
+      data: {state: board}
+    }, (data) => {
       console.log(data)
-
     });
   }
 }
