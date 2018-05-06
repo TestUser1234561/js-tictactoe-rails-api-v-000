@@ -76,7 +76,7 @@ function saveGame() {
     }).done((data) => {
       game = data.data.id;
       $('#games').append(`<button id="gameid-${game}">${game}</button><br>`);
-      $("#gameid-" + game.data.id).click(() => loadGame(game.data.id));
+      $("#gameid-" + data.data.id).click(() => loadGame(data.data.id));
     });
   }
 }
