@@ -58,7 +58,7 @@ function checkWinner() {
 
 function saveGame() {
   let board = $('td').map((index, target) => { return $(target).text(); })
-
+  console.log('here')
   if(game) {
     $.ajax({
       type: 'PATCH',
