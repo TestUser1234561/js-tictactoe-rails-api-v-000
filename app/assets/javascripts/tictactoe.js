@@ -85,9 +85,9 @@ function previousGames() {
   $('#games').empty();
   $.get('/games').done((data) => {
     if (data.data.length) {
-      data.data.forEach(() => {
+      data.data.forEach((game) => {
         $('#games').append(`<button id="gameid-${game}">${game}</button><br>`);
-        $("#gameid-" + data.data.id).click(() => loadGame(game));
+        $("#gameid-" + game.data.id).click(() => loadGame(game));
       });
     }
   })
