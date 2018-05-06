@@ -85,7 +85,7 @@ function previousGames() {
   $('#games').empty();
   $.get('/games').done((data) => {
     if (data.data) {
-      savedGames.data.forEach(buttonizePreviousGame);
+      data.data.forEach(buttonizePreviousGame);
     }
   })
 }
