@@ -15,7 +15,7 @@ function attachListeners() {
   $('#clear').click(() => { resetBoard() })
 }
 
-function player() { return turn % 2 ? 'X' : 'O' }
+function player() { return turn % 2 ? 'O' : 'X' }
 function updateState(s) { $(s).text(player()) }
 
 function doTurn(s) {
