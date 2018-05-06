@@ -57,7 +57,7 @@ function checkWinner() {
 }
 
 function saveGame() {
-  let baord = [];
+  let board = [];
   $('td').each((index, target) => { board[index] = $(target).text(); })
 
   console.log(board)
