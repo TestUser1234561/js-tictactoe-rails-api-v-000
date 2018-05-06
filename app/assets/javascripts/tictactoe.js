@@ -21,6 +21,7 @@ function updateState(s) { $(s).text(player()) }
 function doTurn(s) {
   updateState(s)
   turn++;
+  console.log(checkWinner());
   if (checkWinner()) {
     resetBoard()
   } else if (turn === 9) {
