@@ -70,7 +70,7 @@ function saveGame() {
   } else {
     console.log('2')
     $.ajax({
-      type: 'PATCH',
+      type: 'POST',
       url: `/game`,
       data: {state: board}
     }, function(data) {
