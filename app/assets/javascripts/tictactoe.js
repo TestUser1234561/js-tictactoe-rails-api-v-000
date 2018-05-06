@@ -69,7 +69,6 @@ function saveGame() {
       console.log('here')
     });
   } else {
-    console.log('2')
     $.ajax({
       type: 'POST',
       url: `/games`,
