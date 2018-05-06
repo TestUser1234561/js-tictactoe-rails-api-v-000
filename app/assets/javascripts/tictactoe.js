@@ -100,10 +100,8 @@ function loadGame(id) {
     url: `/games/${id}`,
   }).done((data) => {
 
-    console.log(data)
     $('td').map((index, target) => { $(target).text(data.data.attributes.state[index]); })
     turn = data.data.attributes.state.join('').length;
-    console.log(turn)
     game = data.data.id;
 
   });
