@@ -101,7 +101,7 @@ function loadGame(id) {
   }).done((data) => {
 
     console.log(data)
-    $('td').map((index, target) => { $(target).text(); })
+    $('td').map((index, target) => { $(target).text(data.data.attributes.state[index]); })
 
   });
 
