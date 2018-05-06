@@ -59,7 +59,15 @@ function saveGame() {
 
   if(game) {
     $.ajax({
-
+      type: 'PATCH',
+      url: `/games/${currentGame}`,
+      data: {state: board}
+    });
+  } else {
+    $.post('/games', {state: board}, (game) => {
+      game = game.data.id;
+      $('#games').append(`<button id="gameid-${game.data.id}">${game.data.id}</button><br>`);
+      $("#gameid-" + game.data.id).click(() => { reloadGame(game.data.id) });
     });
   }
 }
