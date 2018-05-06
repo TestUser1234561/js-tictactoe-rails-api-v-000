@@ -4,7 +4,7 @@ const WIN_COMBOS = [
   [6, 7, 8], [2, 5, 8]
 ];
 var turn = 0;
-let game = 0;
+var game = 0;
 
 $(document).ready(attachListeners)
 
