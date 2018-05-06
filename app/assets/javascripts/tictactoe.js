@@ -69,7 +69,19 @@ function saveGame() {
     $.post('/games', {state: board}, (game) => {
       game = game.data.id;
       $('#games').append(`<button id="gameid-${game.data.id}">${game.data.id}</button><br>`);
-      $("#gameid-" + game.data.id).click(() => { reloadGame(game.data.id) });
+      $("#gameid-" + game.data.id).click(() => { loadGame(game.data.id) });
     });
   }
+}
+
+function loadGame(id) {
+  setMessage('')
+
+  $.get({
+    url: `/games/${id}`,
+  }, (data) => {
+    $('td').map((index, target) => { $(target).text(); })
+  });
+
+  game = id;
 }
