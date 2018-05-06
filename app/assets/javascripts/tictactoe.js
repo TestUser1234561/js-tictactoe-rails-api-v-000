@@ -63,7 +63,7 @@ function saveGame() {
   if(game) {
     $.ajax({
       type: 'PATCH',
-      url: `/games/${currentGame}`,
+      url: `/games/${game}`,
       data: {state: board}
     }, () => {
       console.log('here')
