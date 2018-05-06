@@ -60,8 +60,6 @@ function saveGame() {
   let board = [];
   $('td').each((index, target) => { board[index] = $(target).text(); })
 
-  console.log(board)
-
   if(game) {
     $.ajax({
       type: 'PATCH',
