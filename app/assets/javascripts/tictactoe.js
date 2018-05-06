@@ -44,7 +44,7 @@ function checkWinner() {
   WIN_COMBOS.forEach((combo) => {
     if(board[combo[0]] !== '' && board[combo[0]] === board[combo[1]] && board[combo[1]] === board[combo[2]]) {
       setMessage(`Player ${board[combo[0]]} Won!`);
-      return true
+      return true;
     }
   })
 
