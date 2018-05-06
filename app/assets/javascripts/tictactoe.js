@@ -100,6 +100,7 @@ function loadGame(id) {
     url: `/games/${id}`,
   }).done((data) => {
 
+    console.log(data)
     $('td').map((index, target) => { $(target).text(); })
 
   });
