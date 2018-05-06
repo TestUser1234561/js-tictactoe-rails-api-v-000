@@ -15,7 +15,7 @@ function attachListeners() {
   $('#clear').click(() => { resetBoard() })
 }
 
-function player() { turn % 2 ? 'O' : 'X' }
+function player() { retun turn % 2 ? 'O' : 'X' }
 
 function doTurn(s) {
   console.log(player())
