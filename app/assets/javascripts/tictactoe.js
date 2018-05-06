@@ -22,3 +22,7 @@ function resetBoard() {
   turn = 0;
   game = 0;
 }
+
+function setMessage(string) {
+  $('#message').text(string);
+}
