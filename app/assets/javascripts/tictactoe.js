@@ -26,7 +26,8 @@ function doTurn(s) {
     resetBoard()
   } else if (turn === 9) {
     setMessage("Tie game.");
-    console.log(false)
+    saveGame();
+    resetBoard();
   }
 }
 
