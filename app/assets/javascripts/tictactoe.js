@@ -64,6 +64,8 @@ function saveGame() {
       type: 'PATCH',
       url: `/games/${currentGame}`,
       data: {state: board}
+    }, () => {
+      console.log('here')
     });
   } else {
     $.post('/games', {state: board}, (game) => {
