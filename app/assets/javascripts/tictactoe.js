@@ -17,6 +17,10 @@ function attachListeners() {
 
 function player() { turn % 2 ? 'O' : 'X' }
 
+function doTurn() {
+  
+}
+
 function resetBoard() {
   $('td').empty();
   turn = 0;
