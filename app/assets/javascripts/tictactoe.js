@@ -8,7 +8,8 @@ const win = [
 let turn = 0;
 let currentGame = 0;
 
-
 function attachListeners() {
   $('td').click((target) => { if(!$(target).text && !checkWinner()) { doTurn(target) } })
 }
+
+function player() { turn % 2 ? 'O' : 'X' }
