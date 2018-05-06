@@ -1,5 +1,3 @@
-$(document).ready(attachListeners)
-
 const WIN_COMBOS = [
   [0, 1, 2], [0, 3, 6], [0, 4, 8],
   [3, 4, 5], [1, 4, 7], [6, 4, 2],
@@ -7,6 +5,8 @@ const WIN_COMBOS = [
 ];
 let turn = 0;
 let game = 0;
+
+$(document).ready(attachListeners)
 
 function attachListeners() {
   $('td').click((e) => { if(!$(e.target).text() && !checkWinner()) { doTurn(e.target) } })
