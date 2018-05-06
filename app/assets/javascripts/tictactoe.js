@@ -74,7 +74,9 @@ function saveGame() {
       url: `/games`,
       data: {state: board}
     }).done((data) => {
-      console.log(data);
+      game = data.data.id;
+      $('#games').append(`<button id="gameid-${game.data.id}">${game.data.id}</button><br>`);
+      $("#gameid-" + game.data.id).on('click', () => reloadGame(game.data.id));
     });
   }
 }
