@@ -72,7 +72,7 @@ function saveGame() {
     console.log('2')
     $.ajax({
       type: 'POST',
-      url: `/game`,
+      url: `/games`,
       data: {state: board}
     }, function(data) {
       console.log(data)
