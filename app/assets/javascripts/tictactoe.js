@@ -22,7 +22,7 @@ function doTurn(s) {
   updateState(s)
   turn++;
   if (checkWinner()) {
-    console.log(true)
+    resetBoard()
   } else if (turn === 9) {
     console.log(false)
   }
