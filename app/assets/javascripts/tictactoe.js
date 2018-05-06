@@ -80,6 +80,7 @@ function loadGame(id) {
   $.get({
     url: `/games/${id}`,
   }, (data) => {
+    console.log(data)
     $('td').map((index, target) => { $(target).text(); })
   });
 
