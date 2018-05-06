@@ -17,8 +17,9 @@ function attachListeners() {
 
 function player() { turn % 2 ? 'O' : 'X' }
 
-function doTurn() {
-  
+function doTurn(square) {
+  $(target).text(player())
+  turn++;
 }
 
 function resetBoard() {
