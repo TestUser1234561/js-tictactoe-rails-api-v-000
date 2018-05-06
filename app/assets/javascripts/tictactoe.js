@@ -16,7 +16,7 @@ function attachListeners() {
 }
 
 function player() { return turn % 2 ? 'O' : 'X' }
-function updateState(s) { $(s).text(player()); }
+function updateState(s) { $(s).text(player()) }
 
 function doTurn(s) {
   updateState(s)
