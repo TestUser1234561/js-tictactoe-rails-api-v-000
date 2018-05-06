@@ -19,7 +19,7 @@ function player() { return turn + 1 % 2 ? 'O' : 'X' }
 function updateState(s) { $(s).text(player()) }
 
 function doTurn(s) {
-  updateState(s)
+  updateState(s);
   turn++;
   if (checkWinner()) {
     resetBoard()
