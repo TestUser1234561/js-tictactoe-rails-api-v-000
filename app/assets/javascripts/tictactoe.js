@@ -29,6 +29,7 @@ function setMessage(string) {
 
 function checkWinner() {
   let board = $('td').map((index, target) => { $(target).text(); })
+  console.log(board)
 
   WIN_COMBOS.forEach((combo) => {
     if(board[combo[0]] !== '' && board[combo[0]] === board[combo[1]] && board[combo[1]] === board[combo[2]]) {
