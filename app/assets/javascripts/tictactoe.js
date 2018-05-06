@@ -43,7 +43,7 @@ function checkWinner() {
   let board = $('td').map((index, target) => { return $(target).text(); })
   let won = false
 
-  return WIN_COMBOS.forEach((combo) => {
+  WIN_COMBOS.forEach((combo) => {
     if(board[combo[0]] !== '' && board[combo[0]] === board[combo[1]] && board[combo[1]] === board[combo[2]]) {
       setMessage(`Player ${board[combo[0]]} Won!`);
       won = true;
