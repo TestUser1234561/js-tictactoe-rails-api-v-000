@@ -58,9 +58,8 @@ function checkWinner() {
 
 function saveGame() {
   let board = $('td').map((index, target) => { return $(target).text(); })
-  console.log('here')
+
   if(game) {
-    console.log('1')
     $.ajax({
       type: 'PATCH',
       url: `/games/${currentGame}`,
@@ -72,8 +71,7 @@ function saveGame() {
     console.log('2')
     $.post('/games', {state: board}, (data) => {
       console.log(data)
-      //$('#games').append(`<button id="gameid-${game.data.id}">${game.data.id}</button><br>`);
-      //$("#gameid-" + game.data.id).on('click', () => { loadGame(game.data.id) });
+
     });
   }
 }
