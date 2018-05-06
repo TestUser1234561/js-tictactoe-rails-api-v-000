@@ -39,7 +39,7 @@ function checkWinner() {
   });
 
   WIN_COMBOS.each((combo) => {
-    if(board[combo[0]] !== '' && board[combo[0]] === board[combo[1]] === board[combo[3]])
+    if(board[combo[0]] !== '' && board[combo[0]] === board[combo[1]] && board[combo[1]] === board[combo[2]])
   })
 
   return winner;
