@@ -18,7 +18,7 @@ function attachListeners() {
 function player() { return turn % 2 ? 'O' : 'X' }
 function updateState(s) { $(s).text(player()) }
 
-function doTurn(s) {
+var doTurn = function(s) {
   updateState(s);
   turn++;
   if (checkWinner()) {
