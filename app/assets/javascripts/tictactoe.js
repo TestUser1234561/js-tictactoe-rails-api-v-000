@@ -5,7 +5,7 @@ const WIN_COMBOS = [
   [3, 4, 5], [1, 4, 7], [6, 4, 2],
   [6, 7, 8], [2, 5, 8]
 ];
-let turn = 1;
+let turn = 0;
 let game = 0;
 
 function attachListeners() {
