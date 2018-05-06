@@ -102,8 +102,7 @@ function loadGame(id) {
 
     console.log(data)
     $('td').map((index, target) => { $(target).text(data.data.attributes.state[index]); })
+    game = data.data.id;
 
   });
-
-  game = id;
 }
