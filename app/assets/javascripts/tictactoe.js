@@ -75,8 +75,8 @@ function saveGame() {
       data: {state: board}
     }).done((data) => {
       game = data.data.id;
-      $('#games').append(`<button id="gameid-${game.data.id}">${game.data.id}</button><br>`);
-      $("#gameid-" + game.data.id).on('click', () => reloadGame(game.data.id));
+      $('#games').append(`<button id="gameid-${game}">${game}</button><br>`);
+      $("#gameid-" + game.data.id).click(() => reloadGame(game));
     });
   }
 }
