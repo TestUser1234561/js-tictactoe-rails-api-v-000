@@ -75,6 +75,7 @@ function saveGame() {
       data: {state: board}
     }, function(data) {
       console.log(data)
+      console.log('hi')
     });
   }
 }
