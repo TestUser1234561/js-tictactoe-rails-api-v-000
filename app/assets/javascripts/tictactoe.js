@@ -28,7 +28,7 @@ function setMessage(string) {
 }
 
 function checkWinner() {
-  let board = $('td').map((index, target) => { $(target).text(); })
+  let board = $('td').map((index, target) => { return $(target).text(); })
   console.log(board)
 
   WIN_COMBOS.forEach((combo) => {
