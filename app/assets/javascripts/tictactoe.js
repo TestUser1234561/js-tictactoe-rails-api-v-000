@@ -81,6 +81,10 @@ function saveGame() {
   }
 }
 
+function previousGames() {
+  $('#games').empty();
+}
+
 function loadGame(id) {
   setMessage('')
 
