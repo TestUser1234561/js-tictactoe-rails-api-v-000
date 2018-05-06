@@ -83,6 +83,11 @@ function saveGame() {
 
 function previousGames() {
   $('#games').empty();
+  $.get('/games').done((data) => {
+    if (savedGames.data) {
+      savedGames.data.forEach(buttonizePreviousGame);
+    }
+  })
 }
 
 function loadGame(id) {
