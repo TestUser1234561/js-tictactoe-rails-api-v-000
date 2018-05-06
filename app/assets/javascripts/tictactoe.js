@@ -73,9 +73,8 @@ function saveGame() {
       type: 'POST',
       url: `/games`,
       data: {state: board}
-    }, function(data) {
-      console.log(data)
-      console.log('hi')
+    }).done((data) => {
+      console.log(data);
     });
   }
 }
