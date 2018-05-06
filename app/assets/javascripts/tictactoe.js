@@ -9,7 +9,7 @@ let turn = 0;
 let game = 0;
 
 function attachListeners() {
-  $('td').click((target) => { if(!$(target).text && !checkWinner()) { doTurn(target) } })
+  $('td').click((target) => { if(!$(target).text() && !checkWinner()) { doTurn(target) } })
   $('#save').click(() => { saveGame() })
   $('#previous').click(() => { showPreviousGames() })
   $('#clear').click(() => { resetBoard() })
