@@ -102,6 +102,7 @@ function loadGame(id) {
 
     console.log(data)
     $('td').map((index, target) => { $(target).text(data.data.attributes.state[index]); })
+    turn = data.data.attributes.state.length;
     game = data.data.id;
 
   });
