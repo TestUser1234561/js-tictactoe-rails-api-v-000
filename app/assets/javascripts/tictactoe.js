@@ -19,7 +19,7 @@ function player() { turn % 2 ? 'O' : 'X' }
 
 function doTurn(s) {
   console.log(s)
-  $(target).text(player())
+  $(s).text(player())
   turn++;
   if (checkWinner()) {
     console.log(true)
