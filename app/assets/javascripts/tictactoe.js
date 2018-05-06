@@ -20,6 +20,11 @@ function player() { turn % 2 ? 'O' : 'X' }
 function doTurn(square) {
   $(target).text(player())
   turn++;
+  if (checkWinner()) {
+    console.log(true)
+  } else if (turn === 9) {
+    console.log(false)
+  }
 }
 
 function resetBoard() {
